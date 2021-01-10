@@ -8,7 +8,8 @@ public $telefone = null;
 public $numeroFilhos = 2;
 //metodos
 function resumirCadFunc() {
-return "$this->nome tem $this->numeroFilhos filhos";
+  //$this->__get chama  metodo internamente
+return $this->__get('nome')." tem ". $this->__get('numeroFilhos')."filhos";
 }
 function modificarNumFilhos($numFilhos) {
   $this->numeroFilhos = $numFilhos ;

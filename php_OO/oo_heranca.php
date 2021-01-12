@@ -6,6 +6,14 @@ class Veiculo {
     function acelerar() {
         echo "acelerar";
     }
+    function __construct($placa, $cor) {
+        $this->cor = $cor;
+        $this->placa = $placa;
+    }
+    function freiar() {
+        echo "freiado";
+    }
+
 }
 class Carro  extends Veiculo{
   
@@ -18,6 +26,7 @@ class Carro  extends Veiculo{
         echo "mudar posição volante";
     }
 }
+   
 class Moto extends Veiculo {
   
     public $contraPesoguidao = true;
@@ -27,11 +36,22 @@ class Moto extends Veiculo {
     }
 
 }
-$carro = new Carro();
-$moto = new Moto();
+$carro = new Carro("q23r4","preto");
+$moto = new Moto("d4r5ty","azul");
+
 echo '<pre>';
 print_r($carro);
 echo "<br/>";
 print_r($moto);
 echo "</pre>";
+echo "<hr/>";
+$carro->acelerar();
+echo "<br/>";
+$carro->abrirTetoSolar();
+echo "<br/>";
+$carro->freiar();
+echo "<br/>";
+$moto->freiar();
+
+
  ?>

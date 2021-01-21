@@ -37,7 +37,7 @@ $tv = new Tv();
 interface MamiferoInterface {
     public function respirar();
 }
-interface TerrestreInterface() {
+interface TerrestreInterface{
     public function andar();
 }
 interface AquaticoTerrestre{
@@ -65,7 +65,7 @@ class Baleia implements AquaticoTerrestre,  MamiferoInterface {
         echo 'esguichar';
     }
 }
-}
+
 //----------------------//
 interface AnimalInterface{
     public function comer();
@@ -73,7 +73,7 @@ interface AnimalInterface{
 interface AveInterface extends AnimalInterface {
     public function voar();
 }
-interface PapagaioInterface implements  AveInterface {
+class PapagaioInterface  implements  AveInterface {
    
     public function voar() {
         echo 'voar';
